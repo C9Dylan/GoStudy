@@ -5,7 +5,7 @@ import "fmt"
 type Weekday int // 定义一个类型为Weekday, 且元类型为int
 
 const (
-	MONDAY Weekday = iota
+	MONDAY Weekday = iota // 起始默认为0
 	TUESDAY
 	WEDNESDAY
 	THURSDAY

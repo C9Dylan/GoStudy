@@ -4,7 +4,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello World" + "Hello Go")
+	fmt.Println("Hello World" + "\t" + "Hello Go")
 	/**
 		两个命令:
 
