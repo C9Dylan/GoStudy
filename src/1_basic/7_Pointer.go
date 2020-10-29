@@ -5,11 +5,11 @@ import "fmt"
 func main() {
 
 	/**
-		1.运算符:
+	1.运算符:
 
-		&variable: 获取变量的指针
-		*variablePointer: 通过变量指针值获取变量值
-	 */
+	&variable: 获取变量的指针
+	*variablePointer: 通过变量指针值获取变量值
+	*/
 
 	// 2. 指针的类型如何声明
 	pointerType()
@@ -25,7 +25,7 @@ func main() {
 	fmt.Print("v2: ", v2, "\n")
 }
 
-func pointerType()  {
+func pointerType() {
 	// 2. 指针type: var pointerName *variableType = &variable
 	i := 10
 	var i32 int32 = 10
@@ -57,8 +57,9 @@ func pointerExample() {
 	fmt.Printf("variable value after modify: %d\n", variable)
 }
 
-func swap(p1, p2 *int)  {
+func swap(p1, p2 *int) {
 	var t = *p1
 	*p1 = *p2
 	*p2 = t
+	//*p1, *p2 = *p2, *p1
 }

@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 // 0. 声明一个函数为type:
-type f1 func() // 无参
-type f2 func(int) // 有参: 形参可以不用写名称
-type f3 func(i int) // 有参: 形参可以不用写名称
-type f4 func() int // 含有返回值
+type f1 func()               // 无参
+type f2 func(int)            // 有参: 形参可以不用写名称
+type f3 func(i int)          // 有参: 形参可以不用写名称
+type f4 func() int           // 含有返回值
 type f5 func() (int, string) // 含有返回值
 
 type callback func(int)
@@ -26,6 +26,9 @@ func main() {
 	handle(1, 2, func(i int) {
 		fmt.Println(i)
 	})
+	handle2(3, 4, func(i int) {
+		fmt.Println(i)
+	})
 	// 5. 函数作为返回值:
 	rf := returnFunc()
 	i, s := rf(1)
@@ -42,10 +45,14 @@ func sum(x, y int) int {
 }
 
 func multiply(i, j, k int) ([]int, int) {
-	return []int {i, j, k}, i * j * k
+	return []int{i, j, k}, i * j * k
 }
 
-func handle(x, y int, cbf callback) {
+func handle(x, y int, cfb func(i int)) {
+	cfb(sum(x, y))
+}
+
+func handle2(x, y int, cbf callback) {
 	cbf(sum(x, y))
 }
 
