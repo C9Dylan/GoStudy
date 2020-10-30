@@ -9,6 +9,17 @@ type Person struct {
 	age    int
 	salary float64
 	family []Person
+
+	// 1) 无法在结构体内声明方法(成员方法见: 3_function/MemberFunction.go)
+	//func (ptr *Person) assemblePersonalInformation() {}
+
+	// 2) 无法在结构体中定义函数
+	//func test() {}
+
+	// 3) 无法在结构体中定义变量
+	//var name = ""
+
+	// 总结: Struct 就是定义结构. 类似java8之前的接口, 但也还是无法定义常量
 }
 
 func main() {

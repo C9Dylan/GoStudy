@@ -34,6 +34,15 @@ func main() {
 	i, s := rf(1)
 	fmt.Println(i, s)
 	fmt.Println(returnFunc()(2))
+	// 6. 匿名函数
+	func() {
+		fmt.Println("Anonymous func1")
+	}()
+
+	af := func() {
+		fmt.Println("Anonymous func2")
+	}
+	af()
 }
 
 func println(p string) {
